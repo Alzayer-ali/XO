@@ -1,0 +1,46 @@
+/* Custom styles for the game board cells */
+*{
+    font-family: "Tajawal", sans-serif;
+}
+.cell {
+    /* Remove fixed width and height */
+    /* width: 100px; */
+    /* height: 100px; */
+
+    aspect-ratio: 1 / 1; /* تخلي المربع دائماً مربع (الطول يساوي العرض) ويعتمد على عرض العمود في الـ grid */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; /* ممكن تحتاج تعديل بسيط لحجم الخط لو لسه كبير جداً */
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid #4b5563; /* slate-600 for dark border */
+    transition: background-color 0.2s ease-in-out, opacity 0.3s ease-in-out; /* Add opacity transition */
+}
+
+.cell:hover {
+    background-color: #374151; /* slate-700 for dark hover */
+}
+
+.cell.x {
+    color: #f87171; /* red-400 for visibility on dark */
+}
+
+.cell.o {
+    color: #60a5fa; /* blue-400 for visibility on dark */
+}
+
+/* Style for the semi-transparent cell */
+.cell.semi-transparent {
+    opacity: 0.4; /* Slightly less opaque on dark */
+}
+
+/* Style for the message box */
+.message-box {
+    min-height: 2rem; /* Ensure it takes up space even when empty */
+}
+
+select{
+    cursor: pointer;
+}
